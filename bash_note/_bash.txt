@@ -36,4 +36,6 @@ adb "kill/start server":
   $ sudo adb kill-server
   $ sudo adb start-server
 
+find "list all c files in directory" $ find . -type f -name "*.c"  
+
 END OF FILES

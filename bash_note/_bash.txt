@@ -37,5 +37,16 @@ adb "kill/start server":
   $ sudo adb start-server
 
 find "list all c files in directory" $ find . -type f -name "*.c"  
+find "reference": https://blog.gtwang.org/linux/unix-linux-find-command-examples/
 
-END OF FILES
+sed "replace string in a file" $ sed -i 's/unsigned/const unsigned/g' os_checked_iram.h
+ -i: 選項可以直接修改檔案內容
+
+date "reference"
+DATE1=`date +%Y%m%d`
+DATE2=$(date +%Y%m%d)
+echo "執行命令 \"date +%Y%m%d\" 得到結果 `date +%Y%m%d`"
+echo "DATE1 = $DATE1"
+echo "DATE2 = $DATE2"
+ 
+ END OF FILES

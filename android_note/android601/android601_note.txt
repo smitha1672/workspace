@@ -1,0 +1,58 @@
+[Build AOSP 601]
+[error]
+make: *** [out/host/common/obj/JAVA_LIBRARIES/guavalib_intermediates/javalib.jar] Error 41
+[fix] Add PPA for OpenJDK7
+  $ apt-get install software-properties-common python-software-properties
+  $ apt remove openjdk-* icedtea-* icedtea6-*
+  [oracle openjdk ppa source]
+  $ add-apt-repository ppa:openjdk-r/ppa
+  $ apt-get update
+  $ apt-get install openjdk-7-jdk
+  [oracle java jdk ppa source]
+  $ add-apt-repository ppa:webupd8team/java
+  $ apt-get update
+  [JDK6]
+  $ apt-get install oracle-java6-installer
+  [JDK 7]
+  $ apt-get install oracle-java7-installer
+
+  Ref:
+    https://groups.google.com/forum/#!topic/android-building/WbFF6Zk8dqY
+    http://oopsmonk.github.io/blog/2016/06/07/android-build-error-on-ubuntu-16-04-lts
+    http://www.cnblogs.com/bluestorm/p/5677625.html
+
+  PS: If you have other java version in system, make sure your java version is correct.
+  sudo update-alternatives --config java 
+  sudo update-alternatives --config javac 
+  sudo update-alternatives --config javadoc 
+  sudo update-alternatives --config javap 
+  sudo update-alternatives --config javaws 
+  sudo update-alternatives --config jar
+
+[error]
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+build/core/host_shared_library_internal.mk:51: recipe for target 'out/host/linux-x86/obj32/lib/libart.so' failed
+make: *** [out/host/linux-x86/obj32/lib/libart.so] Error 1
+
+[fix]
+./Android.common_build.mk
+ifneq ($(WITHOUT_HOST_CLANG),true)
+  # By default, host builds use clang for better warnings.
+  ART_HOST_CLANG := false
+endif
+
+build/core/base_rules.mk:559: recipe for target 'out/host/linux-x86/framework/jack.jar' failed
+USER: unbound variable
+
+[fix]
+Cause: Build with a docker system
+fix: Define the USER environment variable (not set by default), e.g. export USER=$(whoami)
+
+[docker backup]
+sudo docker export > docker_ubuntu1604_openjdk7.tar
+
+[docker import]
+sudo docker import docker_ubuntu1604_openjdk7.tar ubuntu/16.04:openjdk7
+
+[docker run]
+sudo docker run -t -i -v /home/smith/project/android:/home/aosp_601 ubuntu/16.04:openjdk7 bash

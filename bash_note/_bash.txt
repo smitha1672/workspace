@@ -1,6 +1,16 @@
-screen "connecting a com port" $ screen /dev/ttyUSB0 115200
+grep "search the word in particular file" $ grep "main()" . -r --include *.{php,html}
+grep -r --include="*.c" LOG
+
+minicom "link device" $ minicom -D /dev/ttyUSB0
+minicom "capture log" $ minicom -C xxx.log
+minicom "exit": C-a x
+
+device lock $ sudo rm /var/lock/LCK...ttyUSB2 
+
+screen "connecting a com port and save log" $ screen -L /dev/ttyUSB0 115200
 screen "record current screen anything" C-a H
 screen "clear current screen content: C-a C
+screen "kill": C-a k
 
 vim "import .vimrc file": so ~/.vimrc
 

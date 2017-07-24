@@ -1,5 +1,11 @@
-grep "search the word in particular file" $ grep "main()" . -r --include *.{php,html}
-grep -r --include="*.c" LOG
+git "checkout a tag" $ git checkout <tag name>
+git "push tag to origin" $ git push origin <tag name>
+
+grep "search the word in particular file" 
+$ grep -r --include=*.html --include=*.php --include=*.htm "pattern" /some/path/
+$ grep -r --include=*.{html,php,htm} "pattern" /some/path/
+$ find /some/path/ -name "*.htm*" -or -name "*.php" | xargs grep "pattern"
+
 
 minicom "link device" $ minicom -D /dev/ttyUSB0
 minicom "capture log" $ minicom -C xxx.log
@@ -13,6 +19,12 @@ screen "clear current screen content: C-a C
 screen "kill": C-a k
 
 vim "import .vimrc file": so ~/.vimrc
+
+nas "fury_fw_nas" //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Project/AcerFury/firmware/cwm_release/
+$ sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Project/AcerFury/firmware/cwm_release/ ~/mnt/fw
+
+nas "fury_qa_nas" //172.16.3.220/cwm_rd_nasvr/Document_Center/General/QA/Project/Acer/Fury/cwm_release/
+$ sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/General/QA/Project/Acer/Fury/cwm_release/ ~/mnt/qa
 
 mount "mount nas storage" $sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Personal/Smith /mnt/cwm_nas
 umount "umount a storage" $sudo umount <path>

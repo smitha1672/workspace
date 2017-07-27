@@ -1,3 +1,11 @@
+grep -i pattern files ：不區分大小寫地搜索。默認情況區分大小寫， 
+grep -l pattern files ：隻列出匹配的文件名， 
+grep -L pattern files ：列出不匹配的文件名， 
+grep -w pattern files ：隻匹配整個單詞，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’）， 
+grep -C number pattern files ：匹配的上下文分別顯示[number]行， 
+grep pattern1 | pattern2 files ：顯示匹配 pattern1 或 pattern2 的行， 
+grep pattern1 files | grep pattern2 ：顯示既匹配 pattern1 又匹配 pattern2 的行。
+
 git "checkout a tag" $ git checkout <tag name>
 git "push tag to origin" $ git push origin <tag name>
 
@@ -5,7 +13,6 @@ grep "search the word in particular file"
 $ grep -r --include=*.html --include=*.php --include=*.htm "pattern" /some/path/
 $ grep -r --include=*.{html,php,htm} "pattern" /some/path/
 $ find /some/path/ -name "*.htm*" -or -name "*.php" | xargs grep "pattern"
-
 
 minicom "link device" $ minicom -D /dev/ttyUSB0
 minicom "capture log" $ minicom -C xxx.log
@@ -71,4 +78,4 @@ echo "執行命令 \"date +%Y%m%d\" 得到結果 `date +%Y%m%d`"
 echo "DATE1 = $DATE1"
 echo "DATE2 = $DATE2"
  
- END OF FILES
+END OF FILES

@@ -5,7 +5,7 @@ grep -w pattern files ：隻匹配整個單詞，而不是字符串的一部分�
 grep -C number pattern files ：匹配的上下文分別顯示[number]行， 
 grep pattern1 | pattern2 files ：顯示匹配 pattern1 或 pattern2 的行， 
 grep pattern1 files | grep pattern2 ：顯示既匹配 pattern1 又匹配 pattern2 的行。
-
+e.g: $ grep -rlwn --include=Makefile "at_command_sensor.c" ./project/mt2523_hdk/apps/cmh1000_atci/
 git "checkout a tag" $ git checkout <tag name>
 git "push tag to origin" $ git push origin <tag name>
 

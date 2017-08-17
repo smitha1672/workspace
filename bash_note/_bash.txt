@@ -1,3 +1,6 @@
+
+find "move folders to other folder"
+find . -maxdepth 1 -type d | grep -v .git | grep -v linkit | sudo xargs -I {} mv -v {} ./linkit/
 grep -i pattern files ：不區分大小寫地搜索。默認情況區分大小寫， 
 grep -l pattern files ：隻列出匹配的文件名， 
 grep -L pattern files ：列出不匹配的文件名， 

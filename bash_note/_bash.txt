@@ -1,3 +1,4 @@
+git "only show commit content" $git log -4 --pretty=format:"%s"
 
 find "move folders to other folder"
 find . -maxdepth 1 -type d | grep -v .git | grep -v linkit | sudo xargs -I {} mv -v {} ./linkit/

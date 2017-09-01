@@ -1,0 +1,6 @@
+[error] 
+build/core/ninja.mk:148: recipe for target 'ninja_wrapper' failed
+make: *** [ninja_wrapper] Error 1
+
+[fix] for docker system
+  export USER=$(whoami)

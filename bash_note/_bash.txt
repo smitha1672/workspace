@@ -61,7 +61,7 @@ docker "export a docker image, save the image setting":
   
   $ sudo docker export "NAMES" > "NAMES".tar
 
-docker "import a docker image" $ sudo import NAMES.tar ubuntu/14.04:mt2523
+docker "import a docker image" $ sudo docker import NAMES.tar "YOUR WANTED REPOSITORY":"YOU WANTED TAG"
 
 xxd "create a C header file from a binary file" $ xxd -i "a binary files" > binary_file.h
 

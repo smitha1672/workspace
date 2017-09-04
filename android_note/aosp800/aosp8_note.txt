@@ -9,7 +9,7 @@ repo sync -c -j4;
 [download android 8.0.0 source]
 mkdir aosp_800
 cd aosp_800
-repo init -u https://android.googlesource.com/platform/manifest --reference /home/user/aosp_mirror -b android-8.0.0_r4
+repo init -u https://android.googlesource.com/platform/manifest --reference /home/smith/project/android/aosp_mirror -b android-8.0.0_r4
 repo sync -c -j4
 
 [Download and extract HDMI binaries into the Android source tree]

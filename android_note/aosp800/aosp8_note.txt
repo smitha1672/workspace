@@ -1,5 +1,8 @@
 #target board HiKey620
 
+[run docker image]
+sudo docker run -itv /home/smith/project/android:/home/aosp ubuntu/16.04:aosp7_ bash
+
 [make 800 aosp_mirror]
 mkdir aosp_mirror;
 cd aosp_mirror;

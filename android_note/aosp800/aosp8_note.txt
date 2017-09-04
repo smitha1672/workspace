@@ -1,6 +1,61 @@
-[Build hikey 4.4 kernal]
+#target board HiKey620
+
+[make 800 aosp_mirror]
+mkdir aosp_mirror;
+cd aosp_mirror;
+repo init -u https://android.googlesource.com/platform/manifest --mirror -b android-8.0.0_r4
+repo sync -c -j4;
+
+[download android 8.0.0 source]
+mkdir aosp_800
+cd aosp_800
+repo init -u https://android.googlesource.com/platform/manifest --reference /home/user/aosp_mirror -b android-8.0.0_r4
+repo sync -c -j4
+
+[Download and extract HDMI binaries into the Android source tree]
+wget https://dl.google.com/dl/android/aosp/linaro-hikey-20170523-4b9ebaff.tgz
+tar xzf linaro-hikey-20170523-4b9ebaff.tgz
+./extract-linaro-hikey.sh # type "I ACCEPT"
+
+[install mcopy utility]
+apt-get install mtools
+
+[build aosp]
+source ./build/envsetup.sh
+lunch hikey-userdebug
+make -j4
+
+[My rule]
 export ARCH=arm64
 export CROSS_COMPILE=/home/android/aosp_800/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
-make -j4
+*[build hikey 4.9 kernal]
+git clone https://android.googlesource.com/kernel/hikey-linaro
+cd hikey-linaro
+git checkout -b android-hikey-linaro-4.9 origin/android-hikey-linaro-4.9
+make ARCH=arm64 hikey_defconfig
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j4
 
+[build hikey 4.4 kernal]
+git clone https://android.googlesource.com/kernel/hikey-linaro
+cd hikey-linaro
+git checkout -b hikey_4.4 664e6d0
+make ARCH=arm64 hikey_defconfig
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j4
+
+[build boot image]
+cp -vf arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb ../../aosp_800/device/linaro/hikey-kernel/hi6220-hikey.dtb-4.9
+cp -vf arch/arm64/boot/Image-dtb ../../aosp_800/device/linaro/hikey-kernel/Image-dtb-4.9
+cd /home/android/aosp_800/
+make bootimage -j4
+output file:
+  out/target/product/hikey/boot.img
+
+[build system image]
+make systemimage -j4
+output file:
+  out/target/product/hikey/system.img
+
+
+# Neonkey SensorHub
+https://source.android.com/source/devices

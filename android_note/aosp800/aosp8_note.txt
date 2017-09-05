@@ -59,9 +59,17 @@ make systemimage -j4
 output file:
   out/target/product/hikey/system.img
 
-
 # Neonkey SensorHub
 https://source.android.com/source/devices
+
+[Update Hikey]
+1. Enter fastboot mode by linking J15 1-2 and 5-6 pins.
+2. Run the following commands:
+fastboot flash boot out/target/product/hikey/boot.img
+fastboot flash boot out/target/product/hikey/boot.img
+(I alos do)
+fastboot flash userdata out/target/product/hikey/userdata.img
+fastboot flash cache out/target/product/hikey/cache.img
 
 [issue d091517_1: recipe for target 'include/generated/timeconst.h' failed]
   fix: The error message tells you "bc: not found", so you need to install the "bc" package before building the kernel source.

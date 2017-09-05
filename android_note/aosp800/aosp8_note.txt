@@ -62,3 +62,13 @@ output file:
 
 # Neonkey SensorHub
 https://source.android.com/source/devices
+
+[issue d091517_1: recipe for target 'include/generated/timeconst.h' failed]
+  fix: The error message tells you "bc: not found", so you need to install the "bc" package before building the kernel source.
+  sudo apt-get install bc
+
+[issue d091517_2: build/core/ninja.mk:148: recipe for target 'ninja_wrapper' failed]
+  fix: for docker system
+    export USER=$(whoami)
+
+

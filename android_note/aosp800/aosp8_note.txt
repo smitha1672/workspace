@@ -1,4 +1,42 @@
 #target board HiKey620
+#ref: http://wiki.lemaker.org/HiKey(LeMaker_version)
+
+[How to create a "hello world" kernal module]
+  # ref: The Linux Kernel Module Programming Guide
+    http://www.tldp.org/LDP/lkmpg/2.6/html/index.html
+  # ref: Writing and testing Linux kernel modules for Android
+    http://www.incrediblediy.com/2013/07/writing-and-testing-linux-kernel.html
+  # ref: ./kbuild/makefiles.txt"  
+      --- 3.3 Loadable module goals - obj-m
+      ex: #drivers/isdn/i4l/Makefile
+          obj-$(CONFIG_ISDN_PPP_BSDCOMP) += isdn_bsdcomp.o
+  # ref: modules.txt
+    # ex: /home/smith/project/android/kernal/hikey-linaro/fs/ext2
+  *(I do) http://blog.csdn.net/fengyuwuzu0519/article/details/73772109
+
+  # buit-in mode with hello world
+    drivers/Kconfig
+      add .source "drivers/hello/Kconfig
+    drivers/Makefile
+      add +obj-$(CONFIG_HELLO_MODULE) += hello/ (it is my source directory)
+  # create a kernal module with hikey kernal
+    ref: https://github.com/finallyjustice/android-module/blob/master/hello/README
+    ref: https://wwssllabcd.github.io/blog/2012/11/13/how-to-make-linux-module/
+
+    issue d090717_1: error: variable '__this_module' has initializer but incomplete type
+      fix: 
+        Go to the Android kernel folder and run 
+        make menuconfig 
+        Load the .config file and check if all of following options are checked:
+        (1) Enable loadable module support
+        (2) Forced module loading
+        (3) Module unloading
+        (4) Forced module unloading
+
+        Without options above, you will have compiling error:
+        error: variable '__this_module' has initializer but incomplete type 
+    issue d090117_2: make error
+      fix: use "TAB" before "make" particular word. use "space" that make Makefile rule error    
 
 [run docker image]
 sudo docker run -itv /home/smith/project/android:/home/aosp ubuntu/16.04:aosp7_ bash
@@ -47,8 +85,8 @@ make ARCH=arm64 hikey_defconfig
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j4
 
 [build boot image]
-cp -vf arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb ../../aosp_800/device/linaro/hikey-kernel/hi6220-hikey.dtb-4.9
-cp -vf arch/arm64/boot/Image-dtb ../../aosp_800/device/linaro/hikey-kernel/Image-dtb-4.9
+cp -vf ./kernal/hikey-linaro/arch/arm64/boot/dts/hisilicon/hi6220-hikey.dtb ./aosp_800/device/linaro/hikey-kernel/hi6220-hikey.dtb-4.9
+cp -vf ./kernal/hikey-linaro/arch/arm64/boot/Image-dtb ./aosp_800/device/linaro/hikey-kernel/Image-dtb-4.9
 cd /home/android/aosp_800/
 make bootimage -j4
 output file:
@@ -63,13 +101,18 @@ output file:
 https://source.android.com/source/devices
 
 [Update Hikey]
-1. Enter fastboot mode by linking J15 1-2 and 5-6 pins.
-2. Run the following commands:
-fastboot flash boot out/target/product/hikey/boot.img
-fastboot flash boot out/target/product/hikey/boot.img
-(I alos do)
-fastboot flash userdata out/target/product/hikey/userdata.img
-fastboot flash cache out/target/product/hikey/cache.img
+  1. Enter fastboot mode by linking J15 1-2 and 5-6 pins.
+  2. Run the following commands:
+    fastboot flash boot out/target/product/hikey/boot.img
+    fastboot flash boot out/target/product/hikey/boot.img
+    (I alos do)
+    fastboot flash userdata out/target/product/hikey/userdata.img
+    fastboot flash cache out/target/product/hikey/cache.img
+  3. Update boot.img
+    adb reboot bootloader
+    fastboot flash boot ./out/target/product/hikey/boot.img
+    fastboot reboot
+
 
 [issue d091517_1: recipe for target 'include/generated/timeconst.h' failed]
   fix: The error message tells you "bc: not found", so you need to install the "bc" package before building the kernel source.

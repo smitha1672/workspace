@@ -73,7 +73,7 @@ export CROSS_COMPILE=/home/android/aosp_800/prebuilts/gcc/linux-x86/aarch64/aarc
 *[build hikey 4.9 kernal]
 git clone https://android.googlesource.com/kernel/hikey-linaro
 cd hikey-linaro
-git checkout -b android-hikey-linaro-4.9 origin/android-hikey-linaro-4.9
+git reset --hard 42d2b13094dd
 make ARCH=arm64 hikey_defconfig
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j4
 

@@ -1,6 +1,8 @@
 #target board HiKey620
 #ref: http://wiki.lemaker.org/HiKey(LeMaker_version)
 
+[create a gpio control lkm]
+
 [How to create a "hello world" kernal module]
   # ref: The Linux Kernel Module Programming Guide
     http://www.tldp.org/LDP/lkmpg/2.6/html/index.html

@@ -1,3 +1,5 @@
+svn "export something" $svn export http://172.16.3.240/svn/common/Algorithm/CommonAlgo/XP_NANO/cwm_fusion_ExMem/V03.14.02_20170911/
+git "discard unstaged changes" $git stash save --keep-index
 git "only show commit content" $git log -4 --pretty=format:"%s"
 
 find "move folders to other folder"

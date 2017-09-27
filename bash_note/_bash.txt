@@ -1,3 +1,17 @@
+$ git diff tag1 tag2
+or show log between them:
+
+$ git log tag1..tag2
+sometimes it may be convenient to see only the list of files that were changed:
+
+$ git diff tag1 tag2 --stat
+and then look at the differences for some particular file:
+
+$ git diff tag1 tag2 -- some/file/name
+A tag is only a reference to the latest commit 'on that tag', so that you are doing a diff on the commits between them.
+
+Also, a good reference: http://learn.github.com/p/diff.html
+
 svn "export something" $svn export http://172.16.3.240/svn/common/Algorithm/CommonAlgo/XP_NANO/cwm_fusion_ExMem/V03.14.02_20170911/
 git "discard unstaged changes" $git stash save --keep-index
 git "only show commit content" $git log -4 --pretty=format:"%s"

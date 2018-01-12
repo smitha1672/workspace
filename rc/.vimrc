@@ -4,9 +4,9 @@ autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
 autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
 
 "smith add
-if &diff
-  colorscheme almost-default
-endif
+"if &diff
+"  colorscheme almost-default
+"endif
 
 set softtabstop=2
 " auto change line
@@ -28,7 +28,7 @@ set tabstop=2        " tab width is 4 spaces
 set shiftwidth=2     " indent also with 4 spaces
 set expandtab        " expand tabs to spaces
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=80
+"set textwidth=80
 " turn syntax highlighting on
 set t_Co=256
 syntax on

@@ -1,0 +1,4 @@
+gettime timestr "%Y%m%d-%H%M%S"
+getdir mdir
+sprintf2 filename '%s\w2_lv1_%s.log' mdir timestr
+logopen filename 0 0 0 0

@@ -1,0 +1,15 @@
+sendln 'AT+EPORT=2,syslog,5'
+mpause 100
+sendln 'AT+ESENSORTEST=hrm,off'
+wait 'OK'
+sendln 'AT+ESENSORTEST=sed,on'
+wait 'OK'
+sendln 'AT+ESENSORTEST=act,on'
+wait 'OK'
+for i 1 10000
+sendln 'AT+ESENSORTEST=hrm,on'
+wait 'OK'
+pause 15
+sendln 'AT+ESENSORTEST=hrm,off'
+wait 'OK'
+next

@@ -1,0 +1,9 @@
+sendln 'AT+EPORT=2,syslog,5'
+mpause 100
+sendln 'AT+ESENSORTEST=pdr_peri,on'
+wait 'OK'
+for i 1 31
+sendln 'AT+ESENSORTEST=msg_gnss,on'
+wait 'OK'
+pause 5
+next

@@ -1,0 +1,79 @@
+gettime timestr "%Y%m%d-%H%M%S"
+getdir mdir
+sprintf2 filename '%s\w2_%s.log' mdir timestr
+logopen filename 0 0 0 0
+
+logwrite #13#10'log: SYSTEM INFO MT2523 CMH1000 SDK and CMH1000 FW Version'#13#10
+sendln 'AT+ESENSOR=?'
+wait 'CWM'
+
+sendln 'AT+ESENSOR=7,0'
+wait 'OK'
+
+messagebox inputstr "A sensor cal"
+logwrite #13#10'log: item [acc calibration] '#13#10
+sendln 'AT+ESENSORTEST=cal_acc,on'
+wait 'OK'
+
+messagebox inputstr "G sensor cal"
+logwrite #13#10'log: item [gyro calibration] '#13#10
+sendln 'AT+ESENSORTEST=cal_gyro,on'
+wait 'OK'
+
+messagebox inputstr "GO: A G M"
+logwrite #13#10'log: item [A sensor] '#13#10
+sendln 'AT+ESENSOR=0,1'
+wait 'OK'
+pause 1
+sendln 'AT+ESENSOR=0,0'
+wait 'OK'
+
+logwrite #13#10'log: item [G sensor]'#13#10
+sendln 'AT+ESENSOR=1,1'
+wait 'OK'
+pause 3
+sendln 'AT+ESENSOR=1,0'
+wait 'OK'
+
+logwrite #13#10'log: item [M sensor]'#13#10
+sendln 'AT+ESENSOR=2,1'
+wait 'OK'
+pause 1
+sendln 'AT+ESENSOR=2,0'
+wait 'OK'
+
+messagebox inputstr "GO: BARO"
+logwrite #13#10'log: item [BARO]'#13#10
+sendln 'AT+ESENSOR=3,1'
+wait 'OK'
+pause 5
+sendln 'AT+ESENSOR=3,0'
+wait 'OK'
+
+messagebox inputstr "GO: PPG"
+logwrite #13#10'log: item [PPG]'#13#10
+sendln 'AT+ESENSOR=4,1'
+wait 'OK'
+pause 1
+sendln 'AT+ESENSOR=4,0'
+wait 'OK'
+
+messagebox inputstr "GO: TOUCH"
+logwrite #13#10'log: item [TOUCH]'#13#10
+sendln 'AT+ESENSOR=5,1'
+wait 'OK'
+pause 5
+sendln 'AT+ESENSOR=5,0'
+wait 'OK'
+
+messagebox inputstr "GO: ALL"
+logwrite #13#10'log: item [ALL]'#13#10
+sendln 'AT+ESENSOR=6,1'
+wait 'OK'
+pause 5
+sendln 'AT+ESENSOR=6,0'
+wait 'OK'
+
+:exit
+logclose
+disconnect

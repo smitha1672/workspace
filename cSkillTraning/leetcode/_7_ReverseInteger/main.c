@@ -51,6 +51,20 @@ void xorSwap (char *x, char *y) {
 
 int reverse(int x)
 {
+  long long val = 0;
+
+  do
+  {
+    val = val * 10 + x % 10;
+    x /= 10;
+  } while (x);
+
+  return (val > INT_MAX || val < INT_MIN) ? 0 : val;
+}
+
+#if 0 /*smith resolution*/
+int reverse(int x)
+{
   int ret = 0;
   long int value = 0;
   int n = 0;
@@ -89,6 +103,7 @@ int reverse(int x)
     free(strNumberArray);
   return ret;
 }
+#endif
 
 void main (void)
 {

@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <limits.h>
 #define LEETCODE_LINK "https://leetcode.com/problems/reverse-integer/description/\n"
 /**
 Given a 32-bit signed integer, reverse digits of an integer.
@@ -40,7 +41,7 @@ void printElement(int *array, int arraySize, int idx)
   printf("\n");
 }
 
-void xorSwap (int *x, int *y) {
+void xorSwap (char *x, char *y) {
   if (x != y) {
     *x ^= *y;
     *y ^= *x;
@@ -48,65 +49,50 @@ void xorSwap (int *x, int *y) {
   }
 }
 
-#if 0
-int* convertNumberIntoArray(int number, int *retNumberArraySize)
-{
-  int n = log10(number) + 1;
-  int i;
-  int *numberArray = calloc(n, sizeof(int));
-
-  if (!numberArray)
-    return NULL;
-
-  for (i = 0; i < n; ++i, number /= 10 ) {
-    numberArray[i] = number % 10;
-  }
-
-  *retNumberArraySize= n;
-  return numberArray;
-}
-
-int reverse(int x)
-{
-  int *pIntIntoArray = NULL;
-  int retIntArraySize = 0;
-  int i, l, r;
-  int ret = 0;
-
-  pIntIntoArray = convertNumberIntoArray(x, &retIntArraySize);
-  if (pIntIntoArray) {
-    r = retIntArraySize-1;
-    l = 0;
-    for (i = 0; i < (retIntArraySize/2); i++) { //reverse array
-      printElement(pIntIntoArray, retIntArraySize, i);
-      xorSwap(pIntIntoArray+(l++), pIntIntoArray+(r--));
-    }
-
-    r = 0;
-    for (i = 0; i < retIntArraySize; i++)
-      ret += pIntIntoArray[i]*(int)pow(10, i);
-
-  }
-
-  return ret;
-}
-#endif
-
 int reverse(int x)
 {
   int ret = 0;
-  int n = log10(x) + 1 + 2; /*inlcude "\n"*/
-  char *strNumberArray = (char*)calloc(n, sizeof(char));
+  long int value = 0;
+  int n = 0;
+  int i  = 0, r = 0, l = 0;
+  char *strNumberArray = (char*)calloc(12, sizeof(char));
+  char *pEnd = NULL;
 
+  if (strNumberArray) {
+    memset(strNumberArray, 0, 12);
     sprintf(strNumberArray, "%d", x);
-    printf("array = %s\n", strNumberArray);
+    n = strlen(strNumberArray);
+  }
 
+  if (x > 0) {
+    r = n - 1;
+    l = 0;
+    for (i = 0; i < n/2; i++) {
+      xorSwap(strNumberArray+(l++), strNumberArray+(r--));
+    }
+  } else if (x < 0) {
+    r = n - 1;
+    l = 1;
+    for (i = 0; i < n/2; i++) {
+      xorSwap(strNumberArray+(l++), strNumberArray+(r--));
+    }
+  } else {
+    return ret;
+  }
+
+  value = strtol(strNumberArray, NULL, 10);
+  if (value >= INT_MIN && value <= INT_MAX)
+    ret = (int)value;
+  else
+    ret = 0;
+  if (strNumberArray)
+    free(strNumberArray);
   return ret;
 }
 
 void main (void)
 {
-  int input = -1234;
+  int input = -2147483648;
   int output = 0;
 
   printf(LEETCODE_LINK);

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <limits.h>
+#include <ctype.h>
 #define LEETCODE_LINK "https://leetcode.com/problems/string-to-integer-atoi/description/\n"
 /**
 Implement atoi to convert a string to an integer.
@@ -26,23 +27,42 @@ int myAtoi(char* str) {
 }
 
 a next challenge:
+https://leetcode.com/problems/valid-number/description/
 */
 
 int myAtoi(char* str)
 {
-  int ret = 0;
-  long long val = 0;
+  long result = 0;
+  int sign = 1;
 
-  for (i = 0; str[i] != '\0', i++)
-    val = val*10+str[i]-'0';
+  //discard the first sequence of whitespace characters.
+  while (isspace(*str)) {
+    str++;
+  }
 
-  if (val >= INT_MIN || val <= INT_MAX)
-    ret = (int)val;
+  if ((*str == '+') || (*str == '-')) {
+    sign = (*str == '+') ? 1:0;
+    str++;
+  }
+
+  if (!isdigit(*str)) {
+    return result;
+  }
+
+  while (isdigit(*str) && (result <= INT_MAX)) {
+    result = result * 10 + *str - '0' + 0;
+    str++;
+  }
+
+  if (result > INT_MAX) {
+    return ((sign == 1) ? INT_MAX : INT_MIN);
+  }
+  return ((sign == 1)? result : -result);
 }
 
 void main (void)
 {
-  char input[12] = "3";
+  char input[12] = "1534236469";
   int output = 0;
 
   printf(LEETCODE_LINK);

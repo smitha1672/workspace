@@ -28,6 +28,9 @@ gcc -o main main.c -lm
 int reverse(int x) {
 
 }
+
+a next challenge: https://leetcode.com/problems/string-to-integer-atoi/description/
+8. String to Integer (atoi)
 */
 
 void printElement(int *array, int arraySize, int idx)

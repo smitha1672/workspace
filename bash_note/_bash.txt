@@ -1,3 +1,18 @@
+@ dd operation {
+  create a 0x00 file:
+    $ dd if=/dev/zero bs=1 of=/tmp/file bs=2M count=2000
+      bs: block size, 1次讀取與寫入 BYTES 位元組的資料，此選項會覆蓋 ibs 與 obs 的設定
+      count=N：只處理 N 個輸入區塊，每個區塊的大小為 ibs。
+  padding zero bytes into a end of file
+    $ dd if=/dev/zero bs count=2148 >> file
+  create a 0xff file:
+    $ dd if=/dev/zero bs=1k count=100 | tr "\000" "\377" >paddedFile.bin
+}
+
+@ git show more detal with a commit {
+  git show --pretty=fuller commit_id
+}
+
 @ git review configuration file {
   $ git config -l
 }
@@ -30,7 +45,9 @@
 
 Also, a good reference: http://learn.github.com/p/diff.html
 
-svn "export something" $svn export http://172.16.3.240/svn/common/Algorithm/CommonAlgo/XP_NANO/cwm_fusion_ExMem/V03.14.02_20170911/
+@ svn export somes files {
+  "export something" $ svn export http://172.16.3.240/svn/common/Algorithm/CommonAlgo/XP_NANO/cwm_fusion_ExMem/V03.14.02_20170911/
+}
 git "discard unstaged changes" $git stash save --keep-index
 git "only show commit content" $git log -4 --pretty=format:"%s"
 
@@ -60,21 +77,36 @@ git "push tag to origin" $ git push origin <tag name>
 }
 device lock $ sudo rm /var/lock/LCK...ttyUSB2
 
-screen "connecting a com port and save log" $ screen -L /dev/ttyUSB0 115200
-screen "record current screen anything" C-a H
-screen "clear current screen content: C-a C
-screen "kill": C-a k
+@ screen is used to UART {
+  "connecting a com port and save log" $ screen -L /dev/ttyUSB0 115200
+  "record current screen anything": C-a H
+  "clear current screen content": C-a C
+  "kill": C-a k
+}
 
-vim "import .vimrc file": so ~/.vimrc
+@ vim skill {
+  "import .vimrc file":
+    :so ~/.vimrc
+  "show binary file":
+    :%!xxd
+  "copy more lines in register, and then paste to a place"
+    1. "V" is for a section would be like to copy.
+    2. "kyy
+    3. "kp
+  "replace from string.a to string.b"
+    :1,$s/string.a/string.b/gc
+}
 
-nas "fury_fw_nas" //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Project/AcerFury/firmware/cwm_release/
-$ sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Project/AcerFury/firmware/cwm_release/ ~/mnt/fw
+@ mount @{
+  nas "fury_fw_nas" //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Project/AcerFury/firmware/cwm_release/
+  $ sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Project/AcerFury/firmware/cwm_release/ ~/mnt/fw
 
-nas "fury_qa_nas" //172.16.3.220/cwm_rd_nasvr/Document_Center/General/QA/Project/Acer/Fury/cwm_release/
-$ sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/General/QA/Project/Acer/Fury/cwm_release/ ~/mnt/qa
+  nas "fury_qa_nas" //172.16.3.220/cwm_rd_nasvr/Document_Center/General/QA/Project/Acer/Fury/cwm_release/
+  $ sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/General/QA/Project/Acer/Fury/cwm_release/ ~/mnt/qa
 
-mount "mount nas storage" $sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Personal/Smith /mnt/cwm_nas
-umount "umount a storage" $sudo umount <path>
+  mount "mount nas storage" $sudo mount -t cifs -o username=smith.hu,password=123456 //172.16.3.220/cwm_rd_nasvr/Document_Center/AE/Personal/Smith /mnt/cwm_nas
+  umount "umount a storage" $sudo umount <path>
+}
 
 git "show log and changging files" $ git log -4 --stat --pretty=oneline
 git "git config example" ref: https://gist.github.com/pksunkara/988716
@@ -83,39 +115,52 @@ git "tag remove origin and clone" ref below:
   $ git tag -d 12345
   $ git push origin:refs/tag/12345
 
-docker "show existing docker images" $ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu/14.04        mt2523              8777f884692c        10 days ago         255.7 MB
-ubuntu              raspi               571ff1844733        13 days ago         430.2 MB
-ubuntu              16.04               d355ed3537e9        4 weeks ago         119.2 MB
-ubuntu              14.04               4a2820e686c4        4 weeks ago         188 MB
+@ docker operation {
+  docker "show existing docker images" $ docker images
+  REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+  ubuntu/14.04        mt2523              8777f884692c        10 days ago         255.7 MB
+  ubuntu              raspi               571ff1844733        13 days ago         430.2 MB
+  ubuntu              16.04               d355ed3537e9        4 weeks ago         119.2 MB
+  ubuntu              14.04               4a2820e686c4        4 weeks ago         188 MB
 
-docker "start a docker image" $ sudo docker run -t -i -v /home/smith/project/mt2523:/home/mt2523 ubuntu/14.04:mt2523 bash
-docker "export a docker image, save the image setting":
+  docker "start a docker image" $ sudo docker run -t -i -v /home/smith/project/mt2523:/home/mt2523 ubuntu/14.04:mt2523 bash
+  docker "export a docker image, save the image setting":
   $ sudo sudo docker ps
   CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-  
+
   $ sudo docker export "NAMES" > "NAMES".tar
 
-docker "import a docker image" $ sudo docker import NAMES.tar "YOUR WANTED REPOSITORY":"YOU WANTED TAG"
+  docker "import a docker image" $ sudo docker import NAMES.tar "YOUR WANTED REPOSITORY":"YOU WANTED TAG"
+}
 
-xxd "create a C header file from a binary file" $ xxd -i "a binary files" > binary_file.h
+@ xxd operation {
+  xxd "create a C header file from a binary file" $ xxd -i "a binary files" > binary_file.h
+}
 
-adb "kill/start server":
-  $ sudo adb kill-server
-  $ sudo adb start-server
+@ adb opertaion {
+  "kill/start server":
+    $ sudo adb kill-server
+    $ sudo adb start-server
+}
 
-find "list all c files in directory" $ find . -type f -name "*.c"  
-find "reference": https://blog.gtwang.org/linux/unix-linux-find-command-examples/
+@ find operation {
+  "list all c files in directory"
+    $ find . -type f -name "*.c"
+  "reference": https://blog.gtwang.org/linux/unix-linux-find-command-examples/
+}
 
-sed "replace string in a file" $ sed -i 's/unsigned/const unsigned/g' os_checked_iram.h
- -i: 選項可以直接修改檔案內容
+@ sed operation {
+  sed "replace string in a file" $ sed -i 's/unsigned/const unsigned/g' os_checked_iram.h
+   -i: 選項可以直接修改檔案內容
+}
 
-date "reference"
-DATE1=`date +%Y%m%d`
-DATE2=$(date +%Y%m%d)
-echo "執行命令 \"date +%Y%m%d\" 得到結果 `date +%Y%m%d`"
-echo "DATE1 = $DATE1"
-echo "DATE2 = $DATE2"
- 
+@ date shell script {
+  date "reference"
+  DATE1=`date +%Y%m%d`
+  DATE2=$(date +%Y%m%d)
+  echo "執行命令 \"date +%Y%m%d\" 得到結果 `date +%Y%m%d`"
+  echo "DATE1 = $DATE1"
+  echo "DATE2 = $DATE2"
+}
+
 END OF FILES

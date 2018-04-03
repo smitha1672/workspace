@@ -1,14 +1,32 @@
-$ git diff tag1 tag2
-or show log between them:
+@ git review configuration file {
+  $ git config -l
+}
 
-$ git log tag1..tag2
-sometimes it may be convenient to see only the list of files that were changed:
+@ git remove file {
+  $ git rm <file>
+  $ git commit -m "note"
+}
 
-$ git diff tag1 tag2 --stat
-and then look at the differences for some particular file:
+@ git rename file {
+  $ git mv <file.a> <file.b>
+  $ git commit -m "note"
+}
 
-$ git diff tag1 tag2 -- some/file/name
-A tag is only a reference to the latest commit 'on that tag', so that you are doing a diff on the commits between them.
+@ git diff between more tages {
+  $ git diff tag1 tag2 (--stat)
+    --stat: look at the difference for some particular file
+
+  $ git log tag1..tag2
+  sometimes it may be convenient to see only the list of files that were changed:
+
+  $ git diff tag1 tag2 -- some/file/name
+  A tag is only a reference to the latest commit 'on that tag', so that you are doing a diff on the commits between them.
+}
+
+@ git log {
+  $ git log tag1..tag2 (--stat/--raw)
+    sometimes it may be convenient to see only the list of files that were changed:
+}
 
 Also, a good reference: http://learn.github.com/p/diff.html
 
@@ -29,16 +47,18 @@ e.g: $ grep -rlwn --include=Makefile "at_command_sensor.c" ./project/mt2523_hdk/
 git "checkout a tag" $ git checkout <tag name>
 git "push tag to origin" $ git push origin <tag name>
 
-grep "search the word in particular file" 
-$ grep -r --include=*.html --include=*.php --include=*.htm "pattern" /some/path/
-$ grep -r --include=*.{html,php,htm} "pattern" /some/path/
-$ find /some/path/ -name "*.htm*" -or -name "*.php" | xargs grep "pattern"
+@ grep "search the word in particular file" {
+  $ grep -r --include=*.html --include=*.php --include=*.htm "pattern" /some/path/
+  $ grep -r --include=*.{html,php,htm} "pattern" /some/path/
+  $ find /some/path/ -name "*.htm*" -or -name "*.php" | xargs grep "pattern"
+}
 
-minicom "link device" $ minicom -D /dev/ttyUSB0
-minicom "capture log" $ minicom -C xxx.log
-minicom "exit": C-a x
-
-device lock $ sudo rm /var/lock/LCK...ttyUSB2 
+@ minicom {
+  $ minicom -D /dev/ttyUSB0 /*link device*/
+  $ minicom -C xxx.log /*capture log*/
+  C-a x /*exit*/
+}
+device lock $ sudo rm /var/lock/LCK...ttyUSB2
 
 screen "connecting a com port and save log" $ screen -L /dev/ttyUSB0 115200
 screen "record current screen anything" C-a H
@@ -60,7 +80,7 @@ git "show log and changging files" $ git log -4 --stat --pretty=oneline
 git "git config example" ref: https://gist.github.com/pksunkara/988716
 git "tag a commit and comment" $ git tag -a v1.2 9fceb02 -m "Message here"
 git "tag remove origin and clone" ref below:
-  $ git tag -d 12345 
+  $ git tag -d 12345
   $ git push origin:refs/tag/12345
 
 docker "show existing docker images" $ docker images

@@ -1,0 +1,39 @@
+hun Che, Hu (Smith, Hu)
+886986211886
+Smith.a1672@gmail.com
+
+Technical Experience
+  $ SRAM data corruption.
+  $ Common connectivity: (I2C, RS-232/UART, SPI, ADC, I2S, etc.)
+  $ Hardware debugging with Digital multimeters, Oscilloscope, Logic analyzer
+  $ Design & schematic review
+  $ Audio processing system software/hardware architecture
+  $ Driver Porting and Debug (SPDIF to I2S, ADC, Digital AMP, HDMI repeater, sensor…etc)
+  $ Audio CODEC Driver Porting and Debug (Cirrus Logic CS495314)
+  $ MCU bootloader and application section firmware upgrade
+  $ Operating Systems: Real-time OS(FreeRtos), Embedded Linux
+  $ Firmware Develop Platform: STM32 Cortex-M serious/ AMTEL/ REALTEK CPU
+    96 Boards HIKEY android 7 AOSP
+  $ Experience Specification: HDMI 1.4b HDCP/EDID/CEC/ HDCP 1.4b repeater CTS/ VESA/ CEA 861/ IEC61937/ IEC60958
+  $ Coding tool: C, Linux shell script, dos batch.
+  $ Project Control: GIT, SVN, Redmine, JIAR
+  $ IDE: Linux VIM, Xtensa Xplorer, Eclipse, IAR, Keil C
+Professional Experience
+Staff Engineer, <08/2015> to Present <CyweeMotion, Taipei, Taiwan>
+  $ In charge of wearable product, design and port MEMS sensors driver in ARM cortex M4
+  $ Integrated human activity recognition algorithm in particular platform.
+  $ Porting sensor HAL and sensor driver in particular platform (w AOSP; w/o AOSP).
+  $ Optimized firmware executed efficiency to reduce power consumption.
+  $ Designed physical and virtual sensors streaming with SOC and sensor hub.
+Project Lead Engineer, <12/2009> to <07/2015> <AMTRAN, New Taipei, Taiwan>
+  $ In charge of audio system project (VIZIO SB4451 Sound Bar-CES Best Home Theater)
+  $ Integrated ADC, SPIF, class D amplifiers and bluetooth A2DP ...etc in audio system
+  $ In charge of HDMI 1.4b such as CEC protocol and HDCP repeater CTS.
+  $ survey solution and review supervisor schematic design
+  $ Coordinate cross departments that include HW, PM, QA, factory and customer for project schedule and specification.
+  $ Design and develop sound bar audio system architecture with FreeRTOS on STM32.
+  $ Customize embedded LINUX system (MTK platform) to enrich TV functionality ATSC/DVB-T
+Education
+  TAMKANG University – New Taipei City, Taiwan
+  Bachelor of Science, Department of Electrical Engineering <Jan/2005>
+

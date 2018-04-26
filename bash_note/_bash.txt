@@ -1,3 +1,14 @@
+@ vim How to turn off expandtab for editing makefiles {
+  set noexpandtab
+  set expandtab
+}
+
+@ ubuntu update {
+  $ sudo apt-get update
+  $ sudo apt-get -y dist-upgrade
+  $ sudo apt-get clean
+}
+
 @ dd operation {
   create a 0x00 file:
     $ dd if=/dev/zero bs=1 of=/tmp/file bs=2M count=2000

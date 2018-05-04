@@ -25,40 +25,48 @@ b a c d f e g
 #include <stdio.h>
 #include <string.h>
 
-void charXorSwap(char *x, char *y)
+void reverse(int l, int r, char *s)
 {
-  if (x != y) {
-    *x ^= *y;
-    *y ^= *x;
-    *x ^= *y;
+  char tmp;
+  while(l < r)
+  {
+    tmp = s[r];
+    s[r--] = s[l];
+    s[l++] = tmp;
   }
 }
 
 char* reverseStr(char* s, int k)
 {
-  size_t len = strlen(s)-1;
-  int i = 0, l = 0, r = 0;
+  size_t len = strlen(s);
 
-  if (len < k) {
-    r = len;
-    while (l < r)
-      charXorSwap(&s[l++], &s[r--]);
+  if (len <= k) {
+    reverse(0, len-1, s);
+    return s;
   }
 
+  for (int i = 0; i < len; i += (2*k)) {
+    if (i+(2*k) <= len) { /*at least 2k left*/
+      reverse(i, i+k-1, s);
+    } else if ((len-i) >= k) { /*more than or equal to k left*/
+      reverse(i, i+k-1,s);
+      break;
+    } else if((len-i) < k) { /*less than k,reverse i to len-1*/
+      reverse(i, i+k-1,s);
+      break;
+    }
+  }
   return s;
 }
 
 #define ITEM 10000
 void main(void)
 {
-  char s[ITEM];
-  int k = 0;
+  char s[] = "abcdefg";
+  int k = 2;
   char *t = NULL;
 
-  puts("input k, string");
-  while(scanf("%d %9999s", &k, s) == 2) {
-    t = reverseStr(s, k);
-    printf("%s\n", t);
-  }
+  reverseStr(s, k);
+  printf("s: %s\n", s);
 }
 

@@ -1,8 +1,12 @@
 @ gnu make {
   https://www.gnu.org/software/make/manual/make.html
+  https://www.gnu.org/software/make/
 }
 
 @ linux design {
   https://dywang.csie.cyut.edu.tw/dywang/linuxProgram/
 }
 
+@ gcc {
+  https://gcc.gnu.org/onlinedocs/gcc/
+}

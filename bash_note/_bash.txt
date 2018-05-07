@@ -12,6 +12,15 @@
     "record current screen anything": C-a H
     "clear current screen content": C-a C
     "kill": C-a k
+
+  "Kill detached screen session [closed]"
+    $ screen -X -S [session # you want to kill] quit
+}
+
+@ unzip opt {
+  $ unzip -u test.zip
+  $ unzip -j test.zip /*-j: it only unzip files that doesn't include directory*/
+  $ unzip test.zip -d mydir /*-d: it means destnation directory*/
 }
 
 @ vim How to turn off expandtab for editing makefiles {
@@ -97,10 +106,31 @@
     sometimes it may be convenient to see only the list of files that were changed:
 }
 
+@ git "stash" {
+  $ git stash save "comment"
+  $ git show-branch stash
+  $ git pop /*it will reture to previous stash and drop*/
+  $ git stash drop /*it will remove stash stack*/
+  $ git stash list
+  $ git stash apply <ID>
+}
+
 Also, a good reference: http://learn.github.com/p/diff.html
 
 @ svn export somes files {
   "export something" $ svn export http://172.16.3.240/svn/common/Algorithm/CommonAlgo/XP_NANO/cwm_fusion_ExMem/V03.14.02_20170911/
+}
+
+@ find "move folders to other folder" {
+  find . -maxdepth 1 -type d | grep -v .git | grep -v linkit | sudo xargs -I {} mv -v {} ./linkit/
+  grep -i pattern files ：不區分大小寫地搜索。默認情況區分大小寫， 
+  grep -l pattern files ：隻列出匹配的文件名， 
+  grep -L pattern files ：列出不匹配的文件名， 
+  grep -w pattern files ：隻匹配整個單詞，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’）， 
+  grep -C number pattern files ：匹配的上下文分別顯示[number]行， 
+  grep pattern1 | pattern2 files ：顯示匹配 pattern1 或 pattern2 的行， 
+  grep pattern1 files | grep pattern2 ：顯示既匹配 pattern1 又匹配 pattern2 的行。
+  e.g: $ grep -rlwn --include=Makefile "at_command_sensor.c" ./project/mt2523_hdk/apps/cmh1000_atci/
 }
 
 @ find "move folders to other folder" {

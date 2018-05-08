@@ -70,6 +70,14 @@
 
   "push tag to origin"
   $ git push origin <tag name>
+
+  "rename branch"
+  $ git branch -m <old name> <new name>
+  $ git branch -m <new name>
+
+  "remove a branch from remote"
+  $ git push origin :<branch name>
+  $ git fetch -p
 }
 
 @ git show more detal with a commit {

@@ -26,6 +26,12 @@
   "update diff"
   : diffupdate
 
+  zo 顯示隱藏 / 折疊的文字區塊
+
+  zc 將目前游標所在位置文字區塊隱藏 / 折疊
+
+  zr 將兩份文件都完全折疊
+
   reference linking:
   http://vimdoc.sourceforge.net/htmldoc/diff.html
 }

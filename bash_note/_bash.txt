@@ -1,3 +1,35 @@
+@ ctags {
+  "import source to tags"
+  $ ctags -R ".c.h"
+
+  "move cursor on function, macro, variable...etc"
+  key: ctrl + ]
+
+  "Back to the function call"
+  key: ctrl + t
+
+  "vim import tags file"
+  :set tags=/home/sway/src/tags
+}
+
+@ vimdiff {
+  Keyboard Shortcuts:
+  do - Get changes from other window into the current window.
+  dp - Put the changes from current window into the other window.
+  ]c - Jump to the next change.
+  [c - Jump to the previous change.
+  Ctrl W + Ctrl W - Switch to the other split window.
+
+  If you load up two files in splits (:vs or :sp), you can do :diffthis on each window and achieve a diff of files that were already loaded in buffers
+  :diffoff can be used to turn off the diff mode.
+
+  "update diff"
+  : diffupdate
+
+  reference linking:
+  http://vimdoc.sourceforge.net/htmldoc/diff.html
+}
+
 @ screen note {
   "screen operation"
     Ctrl + a 與 k 關閉目前的 screen 視窗

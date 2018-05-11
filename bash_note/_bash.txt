@@ -1,3 +1,34 @@
+@ How to create a link to a directory [closed] {
+#     Source                             Link
+ln -s /home/jake/doc/test/2000/something /home/jake/xxx
+Hard link (files only, less flexible and not self documenting)
+
+#   Source                             Link
+ln /home/jake/doc/test/2000/something /home/jake/xxx
+}
+
+@ cp sensor hub source example {
+    find $SRC_DIR -type d \( -name sensorhub \) -print | grep -v mt2523_hdk | xargs -I {} cp -rf --parents {} $DEST_DIR
+
+    #cp particular files
+    find $SRC_DIR -type f \( -name at_command_cmh1000.c \) | xargs -I {} cp -rf --parents {} $DEST_DIR
+    find $SRC_DIR -type f \( -name sensor_manager.c -or -name sensor_manager.h -or -name sensor_manager_driver.c -or -name sensor_alg_interface.h \) | xargs -I {} cp -rf --parents {} $DEST_DIR
+    cp -f --parents $SRC_DIR/project/mt2523_hdk/apps/phicomm_w2/src/sys_init.c $DEST_DIR
+
+    #cp image files
+    find $SRC_DIR/out/mt2523_hdk/phicomm_w2/ -maxdepth 1 -type f | xargs -I {} cp -rf --parents {} $DEST_DIR
+}
+
+@ Copy folder structure (sans files) from one location to another {
+  You could do something like:
+
+  find . -type d >dirs.txt
+  to create the list of directories, then
+
+  xargs mkdir -p <dirs.txt
+  to create the directories on the destination.
+}
+
 @ ctags {
   "import source to tags"
   $ ctags -R ".c.h"

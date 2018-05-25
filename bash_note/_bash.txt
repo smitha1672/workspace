@@ -1,3 +1,17 @@
+@ docker {
+# delete docker images
+  $ docker images
+  $ docker rmi image_id
+# install
+  $ sudo apt-get install docker.io
+  $ service docker status
+  $ sudo usermod -aG docker smith
+  $ docker version
+  $ docker search ubuntu
+  $ docker pull ubuntu:16.04
+}
+
+
 @ How to create a link to a directory [closed] {
 #     Source                             Link
 ln -s /home/jake/doc/test/2000/something /home/jake/xxx

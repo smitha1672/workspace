@@ -1,3 +1,7 @@
+@ git log and grep change file {
+  $git log --stat 3ca83cb..bd09f47 | grep '\.\{3\}' | awk '{print $1}'
+}
+
 @ docker {
 # delete docker images
   $ docker images

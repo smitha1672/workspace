@@ -1,3 +1,22 @@
+@ vimscript usage {
+  ref.:http://learnvimscriptthehardway.stevelosh.com/
+}
+
+@ vimgrep usage {
+  ref.: https://blog.easwy.com/archives/advanced-vim-skills-quickfix-mode/
+  As follows:
+    :vim[grep][!] /{pattern}/[g][j] {file} ..
+  Recursive search:
+    :vimgrep /dostuff()/j ../**/*.c
+  Dotfiles:
+    :vimgrep /pattern/ ./.*
+  :cw
+  :copen
+    These commands all fill a list with the results of their search.
+    "grep" and "vimgrep" fill the "quickfix list",
+    which can be opened with :cw or :copen
+}
+
 @ git log and grep change file {
   $git log --stat 3ca83cb..bd09f47 | grep '\.\{3\}' | awk '{print $1}'
 }
@@ -14,7 +33,6 @@
   $ docker search ubuntu
   $ docker pull ubuntu:16.04
 }
-
 
 @ How to create a link to a directory [closed] {
 #     Source                             Link

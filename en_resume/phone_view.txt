@@ -1,0 +1,91 @@
+ref.
+https://funday.asia/Blog/Home/56.htm
+https://www.managertoday.com.tw/english/view/40805
+https://tw.blog.voicetube.com/archives/48444
+
+# Why did you leave your previous company?
+    The company is small and new company and business always focuses on CHINA.
+    Human resource, vendor technical support,
+    the company's growth is limited by economic problem.
+
+    I am searching new opportunity and cooperation relationship from different countries.
+    that is able to assist me grow up in shortly.
+
+# Tell me about yourself.
+    Well, I'd describe myself as a passionate person with a professional skill-set in EE,
+    great communication skills, and excellent team player. In past experiance(TODO)
+
+    On weekend, I take a lot time play with my childrens.
+    Assembling LEGO, plaing TV game, hanging out in famous view place...etc
+
+    On working days,
+    I study with "LINUX program design", "LINUX shell script", "data structure in C"...etc
+    in my spare time.
+
+    Recently, I am reading "computer systems a programmers's perspective" that talks about
+    "machine level repersentation of programs", "processer architecture", "optimizing program performace"...
+    etc.
+
+    Tecnical Experience
+      $ SRAM data corruption.
+      $ Common connectivity: (I2C, RS-232/UART, SPI, ADC, I2S, etc.)
+      $ Hardware debugging with Digital multimeters, Oscilloscope, Logic analyzer
+      $ Design & schematic review
+      $ Audio processing system software/hardware architecture
+      $ Driver Porting and Debug (SPDIF to I2S, ADC, Digital AMP, HDMI repeater, sensor…etc)
+      $ Audio CODEC Driver Porting and Debug (Cirrus Logic CS495314)
+      $ MCU bootloader and application section firmware upgrade
+      $ Operating Systems: Real-time OS(FreeRtos), Embedded Linux
+      $ Firmware Develop Platform: STM32 Cortex-M serious/ AMTEL/ REALTEK CPU
+        96 Boards HIKEY android 7 AOSP
+      $ Experience Specification: HDMI 1.4b HDCP/EDID/CEC/ HDCP 1.4b repeater CTS/ VESA/ CEA 861/ IEC61937/ IEC60958
+      $ Coding tool: C, Linux shell script, dos batch.
+      $ Project Control: GIT, SVN, Redmine, JIAR
+      $ IDE: Linux VIM, Xtensa Xplorer, Eclipse, IAR, Keil C
+    Professional Experience
+      Staff Engineer, <08/2015> to Present <CyweeMotion, Taipei, Taiwan>
+      $ In charge of wearable product, design and port MEMS sensors driver in ARM cortex M4
+      $ Integrated human activity recognition algorithm in particular platform.
+      $ Porting sensor HAL and sensor driver in particular platform (w AOSP; w/o AOSP).
+      $ Optimized firmware executed efficiency to reduce power consumption.
+      $ Designed physical and virtual sensors streaming with SOC and sensor hub.
+    Project Lead Engineer, <12/2009> to <07/2015> <AMTRAN, New Taipei, Taiwan>
+      $ In charge of audio system project (VIZIO SB4451 Sound Bar-CES Best Home Theater)
+      $ Integrated ADC, SPIF, class D amplifiers and bluetooth A2DP ...etc in audio system
+      $ In charge of HDMI 1.4b such as CEC protocol and HDCP repeater CTS.
+      $ survey solution and review supervisor schematic design
+      $ Coordinate cross departments that include HW, PM, QA, factory and customer for project schedule and specification.
+      $ Design and develop sound bar audio system architecture with FreeRTOS on STM32.
+      $ Customize embedded LINUX system (MTK platform) to enrich TV functionality ATSC/DVB-T
+    Education
+      TAMKANG University – New Taipei City, Taiwan
+      Bachelor of Science, Department of Electrical Engineering <Jan/2005>
+
+# What are your goals for the future?
+    My long-term goals are to grow with a company
+    where I can learn new technical application,
+    take on responsibilities,
+    and contribute as much of value as I can.
+
+# What are your salary expectations?
+    I'm more interested in the position that's a good fit for my skills and interests.
+    I'm confident that you're offering a salary that's competitive in the current market.
+    Well, I discussed with Terry and Ben, my salary range is between NT1720k-1800k.
+
+
+Why did you leave your previous company?
+What do you know about our company?
+Tell me about yourself.
+Tell me about your achievements at your previous position.
+What are your responsibilities at your current job?
+What goals do you have in your career?
+What major challenges did you face? How did you handle them?
+How would your former boss describe you?
+What are the most important factors in looking for a new job?
+How would you describe an ideal working environment?
+What is your managerial style?
+Why should I hire you?
+What do you do in your spare time?
+What is your current salary package and what would you expect?
+Would it be a problem for you to relocate?
+When will you be available to start?

@@ -4,16 +4,18 @@ https://www.managertoday.com.tw/english/view/40805
 https://tw.blog.voicetube.com/archives/48444
 
 # Small Talk
-    Hasselt, Belgium. FIFA World Cup, football, Moderate typhoon
+    This is smith. I am attending the phone interview.
 
+    (Hasselt, Belgium. FIFA World Cup, football, Moderate typhoon)
     I saw Belgium versus France from FIFA world cup.
     Belgium missed champion opportunity is disappoint for me.
 
 # What are your goals for the future?
-    My long-term goals are to grow with a company
-    where I can learn new technical application,
-    take on responsibilities,
-    and contribute as much of value as I can.
+    Short term(3 Years):
+      I can learn new technical application, take on responsibilities,
+      and contribute as much of value as I can.
+    Medium/Long term term (3 to 5 Years):
+      I should be a leader with company's traning.
 
 # Why did you leave your previous company?
     I have been at my company for three years now and have learned a lot from working with some amazing engineer.
@@ -23,8 +25,21 @@ https://tw.blog.voicetube.com/archives/48444
     that is used to spray pesticide system.
 
 # Tell me about yourself.
-    Well, I'd describe myself as a passionate person with a professional skill-set in EE,
-    great communication skills, and I am a team player.
+    Well, I'd describe myself as a passionate, postive and considerate person
+    with a professional skill-set in Electrical Engineering,
+
+    I am presently working as staff firmware engineer at CYWEE MOTION
+    algorithm company. I am in charge of CWYEE MOTION sensor hub project with 3 members.
+
+    My responsibilities include:
+      *Customer's functionalities requirement, coordinating, implementation, debugging, evaluation.
+      *Assisting team members, I help them to fix problem from challenges.
+
+    In AMTRAN company, I designed 5.1 channels sound bar audio system and got "CES Best Home Theater Award" with members
+
+    My specail experience:
+    Managing around 140 persons in a company, I was a soilder in army and rank is Lieutenant.
+    I leaned how to team play, great communcation skill and task on time within 4 year volunteer service.
 
     I normally divide one week time to 2 parts:
     On weekend:
@@ -37,19 +52,11 @@ https://tw.blog.voicetube.com/archives/48444
 
     Recently, I am reading "computer systems a programmers's perspective" that talks about
     "machine level repersentation of programs", "processer architecture", "optimizing program performace"...
-    etc.
 
-    I am presently working as staff firmware engineer at CYWEE MOTION
-    algorithm company. I am in charge of CWYEE MOTION sensor hub projec.
-
-    My responsibilities include:
-    Customer's functionalities requirement, coordinating, implementation, debugging, evaluation.
-    Assisting team members, I help them to fix problem from challenges.
-
-    In the pervious job, I designed 5.1 channels sound bar audio system and got "CES Best Home Theater Award" in AMTRAN company.
-
-    The kind of job in which your company is engaged particularly interests me, and
-    I would welcome the opportunity it would afford to use my vairous abilities
+# Why should I hire you?
+  Jabil is a great soultion provider in various industries that need innovation, agility, orchestration.
+  In my personality, and past working experenice. I have great communication skill is for coordinating.
+  Creating a new project from ZERO. Working between customer, factory and member. I should I am the person.
 
 # What are your salary expectations?
     I'm more interested in the position that's a good fit for my skills and interests.

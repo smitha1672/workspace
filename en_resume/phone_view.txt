@@ -3,13 +3,24 @@ https://funday.asia/Blog/Home/56.htm
 https://www.managertoday.com.tw/english/view/40805
 https://tw.blog.voicetube.com/archives/48444
 
-# Why did you leave your previous company? (issue)
-    The company is small and new company and business always focuses on CHINA.
-    Human resource, vendor technical support,
-    the company's growth is limited by economic problem.
+# Small Talk
+    Hasselt, Belgium. FIFA World Cup, football, Moderate typhoon
 
-    I am searching new opportunity and cooperation relationship from different countries.
-    that is able to assist me grow up in shortly.
+    I saw Belgium versus France from FIFA world cup.
+    Belgium missed champion opportunity is disappoint for me.
+
+# What are your goals for the future?
+    My long-term goals are to grow with a company
+    where I can learn new technical application,
+    take on responsibilities,
+    and contribute as much of value as I can.
+
+# Why did you leave your previous company?
+    I have been at my company for three years now and have learned a lot from working with some amazing engineer.
+    My company's chip has been sold over 500K within 3 months in my charg of projects.
+    However, I am starting to feel like I need some new challenges.
+    His position really appeals to me when I heard a special NBIOT application introduction from BEN
+    that is used to spray pesticide system.
 
 # Tell me about yourself.
     Well, I'd describe myself as a passionate person with a professional skill-set in EE,
@@ -39,6 +50,11 @@ https://tw.blog.voicetube.com/archives/48444
 
     The kind of job in which your company is engaged particularly interests me, and
     I would welcome the opportunity it would afford to use my vairous abilities
+
+# What are your salary expectations?
+    I'm more interested in the position that's a good fit for my skills and interests.
+    I'm confident that you're offering a salary that's competitive in the current market.
+    Well, I discussed with Terry and Ben, my salary range is between NT1720k-1800k.
 
     Tecnical Experience
       $ SRAM data corruption.
@@ -74,17 +90,6 @@ https://tw.blog.voicetube.com/archives/48444
     Education
       TAMKANG University – New Taipei City, Taiwan
       Bachelor of Science, Department of Electrical Engineering <Jan/2005>
-
-# What are your goals for the future?
-    My long-term goals are to grow with a company
-    where I can learn new technical application,
-    take on responsibilities,
-    and contribute as much of value as I can.
-
-# What are your salary expectations?
-    I'm more interested in the position that's a good fit for my skills and interests.
-    I'm confident that you're offering a salary that's competitive in the current market.
-    Well, I discussed with Terry and Ben, my salary range is between NT1720k-1800k.
 
 
 Why did you leave your previous company?

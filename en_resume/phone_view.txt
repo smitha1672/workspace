@@ -3,7 +3,7 @@ https://funday.asia/Blog/Home/56.htm
 https://www.managertoday.com.tw/english/view/40805
 https://tw.blog.voicetube.com/archives/48444
 
-# Why did you leave your previous company?
+# Why did you leave your previous company? (issue)
     The company is small and new company and business always focuses on CHINA.
     Human resource, vendor technical support,
     the company's growth is limited by economic problem.
@@ -13,18 +13,32 @@ https://tw.blog.voicetube.com/archives/48444
 
 # Tell me about yourself.
     Well, I'd describe myself as a passionate person with a professional skill-set in EE,
-    great communication skills, and excellent team player. In past experiance(TODO)
+    great communication skills, and I am a team player.
 
-    On weekend, I take a lot time play with my childrens.
-    Assembling LEGO, plaing TV game, hanging out in famous view place...etc
+    I normally divide one week time to 2 parts:
+    On weekend:
+    I take a lot time engage with my childrens.
+    Assembling LEGO, playing TV game, hanging out in famous view place...etc
 
-    On working days,
+    On working days:
     I study with "LINUX program design", "LINUX shell script", "data structure in C"...etc
     in my spare time.
 
     Recently, I am reading "computer systems a programmers's perspective" that talks about
     "machine level repersentation of programs", "processer architecture", "optimizing program performace"...
     etc.
+
+    I am presently working as staff firmware engineer at CYWEE MOTION
+    algorithm company. I am in charge of CWYEE MOTION sensor hub projec.
+
+    My responsibilities include:
+    Customer's functionalities requirement, coordinating, implementation, debugging, evaluation.
+    Assisting team members, I help them to fix problem from challenges.
+
+    In the pervious job, I designed 5.1 channels sound bar audio system and got "CES Best Home Theater Award" in AMTRAN company.
+
+    The kind of job in which your company is engaged particularly interests me, and
+    I would welcome the opportunity it would afford to use my vairous abilities
 
     Tecnical Experience
       $ SRAM data corruption.

@@ -1,3 +1,9 @@
+@ awk usage {
+  awk '{print $1}' filename.txt: simply output
+  awk '{print $1,$2}' filename.txt: ouput more items
+  awk '/<pattern>/{print $1,$2}' filename: if pattern is matched, output $1 and $2
+}
+
 @ vimscript usage {
   ref.:http://learnvimscriptthehardway.stevelosh.com/
 }

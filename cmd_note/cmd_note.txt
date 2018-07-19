@@ -156,10 +156,21 @@ ln /home/jake/doc/test/2000/something /home/jake/xxx
     $ screen -X -S [session # you want to kill] quit
 }
 
-@ unzip opt {
+@ zip usage {
+  Command format. The basic command format is:
+  $ zip options archive inpath inpath ...
+
+  # archive all the source files in the current directory and its subdirectories:
+  $ find ./out/mt2523_watch/watch_ref_design -maxdepth 1 -type f -print | zip -j source -@
+  $ find ./chre/firmware -type f -name "os.checked.*" -print | zip -j w2_cmh1000_fw_v15_1804Bxxx -@
+    -j: junk-path
+}
+
+@ unzip usage {
   $ unzip -u test.zip
   $ unzip -j test.zip /*-j: it only unzip files that doesn't include directory*/
   $ unzip test.zip -d mydir /*-d: it means destnation directory*/
+  $ unzip -l test.zip : show achive's content
 }
 
 @ vim How to turn off expandtab for editing makefiles {

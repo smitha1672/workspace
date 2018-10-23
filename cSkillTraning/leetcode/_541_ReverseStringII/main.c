@@ -25,48 +25,47 @@ b a c d f e g
 #include <stdio.h>
 #include <string.h>
 
-void reverse(int l, int r, char *s)
+void
+reverse(int start, int end, char* s)
 {
-  char tmp;
-  while(l < r)
-  {
-    tmp = s[r];
-    s[r--] = s[l];
-    s[l++] = tmp;
-  }
+    char tmp;
+    while (start < end) {
+        tmp = s[end];
+        s[end--] = s[start];
+        s[start++] = tmp;
+    }
 }
 
-char* reverseStr(char* s, int k)
+char*
+reverseStr(char* s, int k)
 {
-  size_t len = strlen(s);
-
-  if (len <= k) {
-    reverse(0, len-1, s);
-    return s;
-  }
-
-  for (int i = 0; i < len; i += (2*k)) {
-    if (i+(2*k) <= len) { /*at least 2k left*/
-      reverse(i, i+k-1, s);
-    } else if ((len-i) >= k) { /*more than or equal to k left*/
-      reverse(i, i+k-1,s);
-      break;
-    } else if((len-i) < k) { /*less than k,reverse i to len-1*/
-      reverse(i, i+k-1,s);
-      break;
+    size_t len = strlen(s);
+    if (len <= k) {
+        reverse(0, len-1, s);
+        return s;
     }
-  }
-  return s;
+    for (int i = 0; i < len; i += (2*k)) {
+        if (i+(2*k) <= len)   /*at least 2k left*/
+            reverse(i, i+k-1, s);
+        else if ((len-i) >= k) { /*more than or equal to k left*/
+            reverse(i, i+k-1, s);
+            break;
+        } else if ((len-i) < k) { /*less than k,reverse i to len-1*/
+            reverse(i, i+k-1, s);
+            break;
+        }
+    }
+    return s;
 }
 
 #define ITEM 10000
-void main(void)
+void
+main(void)
 {
-  char s[] = "abcdefg";
-  int k = 2;
-  char *t = NULL;
-
-  reverseStr(s, k);
-  printf("s: %s\n", s);
+    char s[] = "abcdefg";
+    int k = 2;
+    char* t = NULL;
+    reverseStr(s, k);
+    printf("s: %s\n", s);
 }
 

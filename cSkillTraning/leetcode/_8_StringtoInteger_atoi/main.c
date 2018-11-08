@@ -30,44 +30,36 @@ a next challenge:
 https://leetcode.com/problems/valid-number/description/
 */
 
-int myAtoi(char* str)
+int
+myAtoi(char* str)
 {
-  long result = 0;
-  int sign = 1;
-
-  //discard the first sequence of whitespace characters.
-  while (isspace(*str)) {
-    str++;
-  }
-
-  if ((*str == '+') || (*str == '-')) {
-    sign = (*str == '+') ? 1:0;
-    str++;
-  }
-
-  if (!isdigit(*str)) {
-    return result;
-  }
-
-  while (isdigit(*str) && (result <= INT_MAX)) {
-    result = result * 10 + *str - '0' + 0;
-    str++;
-  }
-
-  if (result > INT_MAX) {
-    return ((sign == 1) ? INT_MAX : INT_MIN);
-  }
-  return ((sign == 1)? result : -result);
+    long result = 0;
+    int sign = 1;
+    //discard the first sequence of whitespace characters.
+    while (isspace(*str))
+        str++;
+    if ((*str == '+') || (*str == '-')) {
+        sign = (*str == '+') ? 1:0;
+        str++;
+    }
+    if (!isdigit(*str))
+        return result;
+    while (isdigit(*str) && (result <= INT_MAX)) {
+        result = result * 10 + *str - '0' + 0;
+        str++;
+    }
+    if (result > INT_MAX)
+        return ((sign == 1) ? INT_MAX : INT_MIN);
+    return ((sign == 1)? result : -result);
 }
 
-void main (void)
+void
+main (void)
 {
-  char input[12] = "1534236469";
-  int output = 0;
-
-  printf(LEETCODE_LINK);
-  printf("input: %s\n", input);
-  output = myAtoi(input);
-  printf("out: %d\n", output);
-
+    char input[12] = "1534236469";
+    int output = 0;
+    printf(LEETCODE_LINK);
+    printf("input: %s\n", input);
+    output = myAtoi(input);
+    printf("out: %d\n", output);
 }

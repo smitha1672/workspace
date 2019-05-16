@@ -22,7 +22,7 @@ binarysearch(vector<int>& nums, int target)
         else
             right = mid-1;
     }
-    return -1;
+    return left;
 }
 
 int

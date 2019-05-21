@@ -11,6 +11,7 @@ echo "278. First Bad Version" | sed -e 's/^/_/g' -e 's/\.//g' -e 's/ /_/g' | xar
 # [LeetCode Binary Search 67 Problems](https://leetcode.com/tag/binary-search/)
 | # | Title | Source | Difficulty | Solution Reference | Checked |
 |---| ----- | ------ | ---------- | ------------------ | ------- |
+|852|[Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)|[C++](./_852_Peak_Index_in_a_Mountain_Array/main.cpp)|Easy|Solution Reference|0|
 |349|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[C++](./_349_Intersection_of_Two_Arrays/main.cpp)|Easy|Solution Reference|0|
 |167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[C++](./_167_Two_Sum_II_-_Input_array_is_sorted/main.cpp)|Easy|Solution Reference|0|
 |350|[Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[C++](./_350_Intersection_of_Two_Arrays_II/main.cpp)|Easy|Solution Reference|0|

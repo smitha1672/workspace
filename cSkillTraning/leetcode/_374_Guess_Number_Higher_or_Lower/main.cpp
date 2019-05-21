@@ -57,6 +57,3 @@ main(void)
     std::cout << s.guessNumber(10) << std::endl;
     return 0;
 }
-
-
-

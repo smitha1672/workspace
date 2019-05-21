@@ -14,12 +14,6 @@ Solution:: isPerfectSquare(int num)
     while (left <= right) {
         long mid = left+(right-left)/2;
         long target = mid*mid;
-        cout << target <<","
-            << num <<","
-            << left <<","
-            << mid <<","
-            << right <<","
-            << endl;
         if (target == num)
             return true;
         else if (target < num)
@@ -34,6 +28,6 @@ int
 main(void)
 {
     Solution s;
-    cout << s.isPerfectSquare(16) << endl;
+    cout << s.isPerfectSquare(14) << endl;
     return 0;
 }

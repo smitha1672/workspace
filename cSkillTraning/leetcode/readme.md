@@ -11,6 +11,7 @@ echo "278. First Bad Version" | sed -e 's/^/_/g' -e 's/\.//g' -e 's/ /_/g' | xar
 # [LeetCode Binary Search 67 Problems](https://leetcode.com/tag/binary-search/)
 | # | Title | Source | Difficulty | Solution Reference | Checked |
 |---| ----- | ------ | ---------- | ------------------ | ------- |
+|744|[Find Smallest Letter Greater Than Target](https://leetcode.com/problems/search-insert-position/)|[C++](./_744_Find_Smallest_Letter_Greater_Than_Target/main.cpp)|Easy|Solution Reference|0|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[C++](./_35_Search_Insert_Position/main.cpp)|Easy|Solution Reference|0|
 |367|[Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[C++](./_367_Valid_Perfect_Square/main.cpp)|Easy|Solution Reference|0|
 |374|[Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower)|[C++](./_374_Guess_Number_Higher_or_Lower/main.cpp)|Easy|Solution Reference|0|

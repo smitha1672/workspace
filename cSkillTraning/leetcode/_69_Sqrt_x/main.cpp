@@ -32,6 +32,7 @@ int
 Solution::mySqrt(int x)
 {
     if (x <= 0) return 0;
+    //the sqrt is not greater than x/2+1
     int left = 0, right = x/2+1;
     while(left <= right) {
         int mid = left+(right-left)/2;

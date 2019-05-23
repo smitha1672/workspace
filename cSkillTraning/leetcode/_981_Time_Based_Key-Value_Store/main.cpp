@@ -115,14 +115,16 @@ public:
         int n = mmap[key].size();
         if (mmap[key][0].first > timestamp) return "";
         // binary search
-        int left = 0, right = n - 1;
-        while (left < right - 1) {
-            int mid = (left + right) / 2;
-            if (mmap[key][mid].first <= timestamp) left = mid;
+        int left = 0, right = n-1;
+        while (left < right-1) {
+            int mid = left + (right - left) / 2;
+            if (mmap[key][mid].first <= timestamp)
+                left = mid;
             else
                 right = mid - 1;
         }
-        if (mmap[key][right].first <= timestamp) return mmap[key][right].second;
+        if (mmap[key][right].first <= timestamp)
+            return mmap[key][right].second;
         return mmap[key][left].second;
     }
 };

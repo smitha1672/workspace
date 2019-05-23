@@ -85,42 +85,47 @@ private:
 
 /*g++ -std=c++11 main.cpp is able to build pass*/
 
-#include <utility>          // std::move
 #include <string>           // std::string
 #include <map>              // std::map
-#include <unordered_map>    // std::unordered_map
 #include <vector>           // std::vector
-#include <algorithm>        // std::find
 
 #include <iostream>
 
+using namespace std;
+
 class TimeMap {
 private:
-    std::unordered_map<std::string, std::map<int, std::string>> s_; /*unordered_map has to include unordered_map*/
+    map<string, vector<pair<int, string>>> mmap;
+
 public:
-    /** Initialize your data structure here. */
     TimeMap()
     {
     }
-    void set(std::string key, std::string value, int timestamp);
-    std::string get(std::string key, int timestamp);
+
+    void
+    set(string key, string value, int timestamp)
+    {
+        mmap[key].emplace_back(timestamp, value);
+    }
+
+    string
+    get(string key, int timestamp)
+    {
+        if (mmap.find(key) == mmap.end()) return "";
+        int n = mmap[key].size();
+        if (mmap[key][0].first > timestamp) return "";
+        // binary search
+        int left = 0, right = n - 1;
+        while (left < right - 1) {
+            int mid = (left + right) / 2;
+            if (mmap[key][mid].first <= timestamp) left = mid;
+            else
+                right = mid - 1;
+        }
+        if (mmap[key][right].first <= timestamp) return mmap[key][right].second;
+        return mmap[key][left].second;
+    }
 };
-
-void
-TimeMap::set(std::string key, std::string value, int timestamp)
-{
-    s_[key].emplace(timestamp, std::move(value));
-}
-
-std::string
-TimeMap::get(std::string key, int timestamp)
-{
-    auto m = s_.find(key);
-    if (m == s_.end()) return "";
-    auto it = m->second.upper_bound(timestamp);
-    if (it == begin(m->second)) return "";
-    return prev(it)->second;
-}
 
 int
 main(void)

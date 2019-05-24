@@ -46,8 +46,15 @@ public:
             long m = l + (r - l) / 2;
             int total = 0;
             int s = n;
-            for (const auto& row : matrix)
+            for (const auto& row : matrix) {
                 total += (s = distance(begin(row), upper_bound(begin(row), begin(row) + s, m)));
+                cout << "d: " << distance(begin(row), upper_bound(begin(row), begin(row) + s, m))
+                    << " u: " << *upper_bound(begin(row), begin(row) + s, m)
+                    << " r1: " << *(begin(row))
+                    << " m: " << m
+                    << " r2: " << *(begin(row) + s)
+                    << endl;
+            }
             if (total >= k)
                 r = m;
             else
@@ -68,6 +75,11 @@ main(void)
         { 7, 8, 9 }
     };
     Solution s;
-    cout << s.kthSmallest(vect, 8) << endl;
+    cout << s.kthSmallest(vect,5) << endl;
+
+    std::vector<int> v1 = {1, 2, 3};
+    std::vector<int> v2 = {4, 5, 6};
+    std::vector<int> v3 = {7, 8, 9};
+    cout << distance(v2.begin(), upper_bound(v2.begin(), v2.end(), 4)) << endl;
     return 0;
 }

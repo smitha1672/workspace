@@ -34,6 +34,7 @@ https://leetcode.com/tag/binary-search/
 |454|[4Sum II](https://leetcode.com/problems/4sum-ii/)|[C++](./_454_4Sum_II/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/hashtable/leetcode-454-4sum-ii/)|0|
 |278|[Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number)|[C++](./_287_Find_the_Duplicate_Number/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/algorithms/binary-search/leetcode-287-find-the-duplicate-number/)|0|
 |378|[Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix)|[C++](./_378_Kth_Smallest_Element_in_a_Sorted_Matrix/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/algorithms/binary-search/leetcode-378-kth-smallest-element-in-a-sorted-matrix/)|0|
+|392|[Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[C++](./_392_Is_Subsequence/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/string/leetcode-392-is-subsequence/)|0|
 
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)

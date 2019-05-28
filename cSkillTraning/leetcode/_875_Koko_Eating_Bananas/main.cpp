@@ -36,6 +36,7 @@
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ public:
     int
     minEatingSpeed(vector<int>& piles, int H)
     {
-        int left = 1, right = 1e9;
+        int left = 1, right = *max_element(begin(piles), end(piles)) + 1;
         while (left < right) {
             int mid = left + (right - left) / 2, cnt = 0;
             for (int pile : piles) cnt += (pile + mid - 1) / mid;

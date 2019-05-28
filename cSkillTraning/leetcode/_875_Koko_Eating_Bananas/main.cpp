@@ -37,6 +37,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <stdio.h>
 
 using namespace std;
 
@@ -48,6 +49,10 @@ public:
         int left = 1, right = *max_element(begin(piles), end(piles)) + 1;
         while (left < right) {
             int mid = left + (right - left) / 2, cnt = 0;
+            /*
+                比如 K=4，那么假如有3个香蕉，需要1个小时，有4香蕉，还是1个小时，有5个香蕉，就需要两个小时，
+                如果将三种情况融合为一个式子呢，就是用吃速加上香蕉个数减去1，再除以吃速即可，即 (pile+mid-1)/mid，
+            */
             for (int pile : piles) cnt += (pile + mid - 1) / mid;
             if (cnt > H) left = mid + 1;
             else right = mid;

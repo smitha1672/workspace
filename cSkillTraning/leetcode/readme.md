@@ -37,7 +37,7 @@ https://leetcode.com/tag/binary-search/
 |392|[Is Subsequence](https://leetcode.com/problems/is-subsequence/)|[C++](./_392_Is_Subsequence/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/string/leetcode-392-is-subsequence/)|0|
 |911|[Online Election](https://leetcode.com/problems/online-election/)|[C++](./_911_Online_Election/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/hashtable/leetcode-911-online-election/)|0|
 |718|[Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)|[C++](./_718_Maximum_Length_of_Repeated_Subarray/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/7801533.html)|0|
-
+|875|[Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)|[C++](./_875_Koko_Eating_Bananas/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/10807121.html)|0|
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)
 # [LeetCode String 123 Problems](https://leetcode.com/tag/string/)

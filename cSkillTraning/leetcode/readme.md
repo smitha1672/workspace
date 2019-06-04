@@ -40,7 +40,8 @@ https://leetcode.com/tag/binary-search/
 |875|[Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)|[C++](./_875_Koko_Eating_Bananas/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/10807121.html)|0|
 |153|[Find Minimum in Rotated SortedArray](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)|[C++](./_153_Find_Minimum_in_Rotated_Sorted_Array/main.cpp)|Medium|[Solution Reference](https://zxi.mytechroad.com/blog/leetcode/leetcode-153-find-minimum-in-rotated-sorted-array/)|0|
 |436|[Find Right Interval](https://leetcode.com/problems/find-right-interval/)|[C++](./_436_Find_Right_Interval/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/6018581.html)|-1|
-|528|[Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)|[C++](./_528_Random_Pick_with_Weight/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/9784690.html)|0|
+|528|[Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)|[C++](./_528_Random_Pick_with_Weight/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/9784690.html)|-1|
+|162|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[C++](./_162_Find_Peak_Element/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/4217175.html)|0|
 |  |  |  |  |  |  |
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)

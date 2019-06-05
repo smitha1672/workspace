@@ -35,7 +35,6 @@ public:
         while (res.size() > k) {
             if (x - res.front() <= res.back() - x)
                 res.pop_back();
-
             else
                 res.erase(res.begin());
         }
@@ -61,9 +60,9 @@ public:
 int
 main(void)
 {
-    vector<int>arr_{1,2,3,4,5};
-    Solution1 s1;
-    for(auto value: s1.findClosestElements(arr_, 4, 3))
+    vector<int>arr_{1, 2, 3, 4, 5};
+    Solution2 s2;
+    for (auto value: s2.findClosestElements(arr_, 4, 3))
         cout << value << endl;
     return 0;
 }

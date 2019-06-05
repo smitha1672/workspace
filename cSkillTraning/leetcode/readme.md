@@ -46,6 +46,8 @@ https://leetcode.com/tag/binary-search/
 |300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[C++](./_300_Longest_Increasing_Subsequence/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/4938187.html)|0|
 |658|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[C++](./_658_Find_K_Closest_Elements/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/7519466.html)|0|
 |497|[Random Point in Non-overlapping Rectangles](https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/)|[C++](./_497_Random_Point_in_Non-overlapping_Rectangles/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/9752145.html)|-1|
+|275|[H-Index II](https://leetcode.com/problems/h-index-ii/)|[C++](./_275_H-Index_II/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/4782695.html)|0|
+|  |  |  |  |  |  |
 |  |  |  |  |  |  |
 |  |  |  |  |  |  |
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)

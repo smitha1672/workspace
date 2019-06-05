@@ -47,7 +47,7 @@ https://leetcode.com/tag/binary-search/
 |658|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[C++](./_658_Find_K_Closest_Elements/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/7519466.html)|0|
 |497|[Random Point in Non-overlapping Rectangles](https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/)|[C++](./_497_Random_Point_in_Non-overlapping_Rectangles/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/9752145.html)|-1|
 |275|[H-Index II](https://leetcode.com/problems/h-index-ii/)|[C++](./_275_H-Index_II/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/4782695.html)|0|
-|  |  |  |  |  |  |
+|74|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[C++](./_74_Search_a_2D_Matrix/main.cpp)|Medium|[Solution Reference](https://www.cnblogs.com/grandyang/p/4323301.html)|0|
 |  |  |  |  |  |  |
 |  |  |  |  |  |  |
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)

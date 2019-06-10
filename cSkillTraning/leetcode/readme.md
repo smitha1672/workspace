@@ -51,6 +51,7 @@ https://leetcode.com/tag/binary-search/
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[C++](./_209_Minimum_Size_Subarray_Sum/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4501934.html)|0|
 |222|[Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[C++](./_222_Count_Complete_Tree_Nodes/main.cpp)|Medium|[Sol](https://github.com/grandyang/leetcode/issues/222)|0|
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[C++](./_34_Find_First_and_Last_Position_of_Element_in_Sorted_Array/main.cpp)|Medium|[Sol](https://blog.csdn.net/fuxuemingzhu/article/details/83273084)|0|
+|33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[C++](./_33_Search_in_Rotated_Sorted_Array/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4325648.html)|0|
 |  |  |  |  |  |  |
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)

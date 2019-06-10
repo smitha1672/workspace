@@ -54,6 +54,7 @@ https://leetcode.com/tag/binary-search/
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[C++](./_33_Search_in_Rotated_Sorted_Array/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4325648.html)|0|
 |81|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[C++](./_81_Search_in_Rotated_Sorted_Array_II/main.cpp)|Medium|[Sol](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|0|
 |50|[Pow(x, n)](https://leetcode.com/problems/powx-n/)|[C++](./_50_Pow/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4383775.html)|0|
+|29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|[C++](./_29_Divide_Two_Integers/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4431949.html)|0|
 |  |  |  |  |  |  |
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)

@@ -56,7 +56,10 @@ https://leetcode.com/tag/binary-search/
 |50|[Pow(x, n)](https://leetcode.com/problems/powx-n/)|[C++](./_50_Pow/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4383775.html)|0|
 |29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|[C++](./_29_Divide_Two_Integers/main.cpp)|Medium|[Sol](https://www.cnblogs.com/grandyang/p/4431949.html)|0|
 |  |  |  |  |  |  |
+
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
+|992|[Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/)|[C++]()|Medium|[Sol](https://zxi.mytechroad.com/blog/uncategorized/leetcode-922-sort-array-by-parity-ii/)|0|
+|  |  |  |  |  |  |
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)
 # [LeetCode String 123 Problems](https://leetcode.com/tag/string/)
 

@@ -58,7 +58,9 @@ https://leetcode.com/tag/binary-search/
 |  |  |  |  |  |  |
 
 # [LeetCode Sort 29 Problems](https://leetcode.com/tag/sort/)
-|992|[Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/)|[C++]()|Medium|[Sol](https://zxi.mytechroad.com/blog/uncategorized/leetcode-922-sort-array-by-parity-ii/)|0|
+| # | Title | Source | Difficulty | Sol | Checked |
+|---| ----- | ------ | ---------- | ------------------ | ------- |
+|992|[Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/)|[C++](./_922_Sort_Array_By_Parity_II/main.cpp)|Medium|[Sol](https://zxi.mytechroad.com/blog/uncategorized/leetcode-922-sort-array-by-parity-ii/)|0|
 |  |  |  |  |  |  |
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)
 # [LeetCode String 123 Problems](https://leetcode.com/tag/string/)

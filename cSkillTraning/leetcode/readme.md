@@ -61,6 +61,7 @@ https://leetcode.com/tag/binary-search/
 | # | Title | Source | Difficulty | Sol | Checked |
 |---| ----- | ------ | ---------- | ------------------ | ------- |
 |992|[Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/)|[C++](./_922_Sort_Array_By_Parity_II/main.cpp)|Medium|[Sol](https://zxi.mytechroad.com/blog/uncategorized/leetcode-922-sort-array-by-parity-ii/)|0|
+|1122|[Relative Sort Array](https://leetcode.com/problems/relative-sort-array/)|[C++](./_1122_Relative_Sort_Array/main.cpp)|Easy|[Sol](https://leetcode.com/problems/relative-sort-array/discuss/334908/chinesec-1122-map-tong-ji-on-jin-xing-xiang-dui-wei-zhi-pai-xu)|0|
 |  |  |  |  |  |  |
 # [LeetCode Recursion 14 Problems](https://leetcode.com/tag/recursion/)
 # [LeetCode String 123 Problems](https://leetcode.com/tag/string/)

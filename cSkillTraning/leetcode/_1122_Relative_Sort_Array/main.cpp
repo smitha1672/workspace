@@ -43,6 +43,10 @@ public:
         map<int, int> m;
         for (auto v: arr1)
             m[v]++;
+
+        for (auto iter = m.begin(); iter != m.end(); iter ++)
+            cout << "m1 ("<< iter->first << ", " << iter->second << ")\n";
+
         vector<int> ans;
         for (auto v: arr2) {
             auto it = m.find(v);
@@ -51,6 +55,10 @@ public:
                 it->second--;
             }
         }
+
+        for (auto iter = m.begin(); iter != m.end(); iter ++)
+            cout << "m2 ("<< iter->first << ", " << iter->second << ")\n";
+
         for (auto p: m) {
             while (p.second > 0) {
                 ans.push_back(p.first);
@@ -67,9 +75,11 @@ main(void)
     int i = 0;
     Solution s;
     vector<int> arr1 = {2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}, arr2 = {2, 1, 4, 3, 9, 6};
-    s.relativeSortArray(arr1, arr2);
-    for (i = 0 ; i < arr1.size(); i++)
-        printf("%d \n", arr1[i]);
-
+    vector<int> result;
+    result = s.relativeSortArray(arr1, arr2);
+    printf("result =");
+    for (i = 0 ; i < result.size(); i++)
+        printf(" %d ", result[i]);
+    printf("\n");
     return 0;
 }

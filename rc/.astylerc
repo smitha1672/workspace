@@ -19,7 +19,7 @@
 #--indent=force-tab=#
 #--indent=force-tab-x=#
 #--attach-namespaces
-#--attach-classes
+--attach-classes
 #--attach-inlines
 #--attach-extern-c
 --attach-closing-while
@@ -48,13 +48,13 @@
 #--pad-paren-in
 --pad-header
 #--unpad-paren
---delete-empty-lines
+#--delete-empty-lines
 #--fill-empty-lines
---align-pointer=type
+#--align-pointer=type
 #--align-pointer=middle
 #--align-pointer=name
 #--align-reference=none
---align-reference=type
+#--align-reference=type
 #--align-reference=middle
 #--align-reference=name
 #--break-closing-braces
@@ -64,7 +64,7 @@
 #--add-braces
 #--add-one-line-braces
 --remove-braces
---break-return-type
+#--break-return-type
 #--break-return-type-decl
 #--attach-return-type
 #--attach-return-type-decl
